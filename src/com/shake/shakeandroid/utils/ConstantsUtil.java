@@ -2,7 +2,7 @@ package com.shake.shakeandroid.utils;
 
 
 /**
- * Ò»Ğ©³£Á¿
+ * ä¸€äº›å¸¸é‡
  * 
  * @author cp
  *
@@ -10,13 +10,13 @@ package com.shake.shakeandroid.utils;
 public class ConstantsUtil 
 {
 	
-	//Î¢ĞÅ½Ó¿ÚµÄID
+	//å¾®ä¿¡æ¥å£çš„ID
 	public static final String APP_ID = "wx36eeaa4b8972e28e";
-	//BmobÖĞApplication ID£¬SDK³õÊ¼»¯±ØĞëÓÃµ½´ËÃÜÔ¿
+	//Bmobä¸­Application IDï¼ŒSDKåˆå§‹åŒ–å¿…é¡»ç”¨åˆ°æ­¤å¯†é’¥
 	public static final String Application_ID = "a8c17e7c95c1858ec0b0bfe096c2fbb9";
-	//BmobÖĞREST APIÇëÇóÖĞHTTPÍ·²¿ĞÅÏ¢±ØĞë¸½´øÃÜÔ¿Ö®Ò»
+	//Bmobä¸­REST APIè¯·æ±‚ä¸­HTTPå¤´éƒ¨ä¿¡æ¯å¿…é¡»é™„å¸¦å¯†é’¥ä¹‹ä¸€
 	public static final String RESTAPI_KEY = "8fe52c4e44028354fbe78d4b6cbd7371";
-	//BmobÖĞSecret Key£¬ÊÇSDK°²È«ÃÜÔ¿£¬²»¿ÉĞ¹Â©£¬ÔÚÔÆ¶ËÂß¼­²âÊÔÔÆ¶Ë´úÂëÊ±ĞèÒªÓÃµ½
+	//Bmobä¸­Secret Keyï¼Œæ˜¯SDKå®‰å…¨å¯†é’¥ï¼Œä¸å¯æ³„æ¼ï¼Œåœ¨äº‘ç«¯é€»è¾‘æµ‹è¯•äº‘ç«¯ä»£ç æ—¶éœ€è¦ç”¨åˆ°
 	public static final String SECRET_KEY = "e0d9479ec56593d0";
 	
 }

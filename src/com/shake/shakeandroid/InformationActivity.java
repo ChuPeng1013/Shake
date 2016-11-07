@@ -83,19 +83,19 @@ public class InformationActivity extends Activity
 					}
 					if(delete)
 					{
-						ToastUtil.toastCenter(InformationActivity.this, "ɾ��ɹ�");
+						ToastUtil.toastCenter(InformationActivity.this, "删除成功");
 						Intent intent = new Intent(InformationActivity.this, InformationActivity.class);
 						startActivity(intent);
 						finish();
 					}
 					else
 					{
-						ToastUtil.toastCenter(InformationActivity.this, "ɾ��ʧ��");
+						ToastUtil.toastCenter(InformationActivity.this, "删除失败");
 					}
 				}
 				else
 				{
-					ToastUtil.toastCenter(InformationActivity.this, "��ѡ�����е�һ��");
+					ToastUtil.toastCenter(InformationActivity.this, "数据库为空");
 				}
 			}
 		});

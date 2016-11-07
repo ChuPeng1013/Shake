@@ -4,7 +4,7 @@ public class Punishment
 {
 	private int id;
 	private String punishmentContent;
-	private boolean isSelect = false;//是否被选中的标记
+	private boolean isSelect = false;
 	public int getId() 
 	{
 		return id;

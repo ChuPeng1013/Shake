@@ -261,9 +261,9 @@ public class MainAnimationActivity extends Activity
 			
 			public void onAnimationEnd(Animation animation) 
 			{
-				//��100ms
+				//震动100ms
 				VibratorUtil.Vibrate(MainAnimationActivity.this, 1000);
-				dialog("���ȷ�����͵�΢�Ų鿴���");
+				dialog("点击确定发送到微信查看结果");
 			}
 		});
 	}
@@ -298,7 +298,7 @@ public class MainAnimationActivity extends Activity
 		}
 	};
 	
-	//�����ʾ��Ϣ�����Ի��򵯳��Ի���
+	//根据提示信息弹出对话框弹出对话框
 	private void dialog(String result)
 	{
 		alertDialog = new AlertDialog.Builder(MainAnimationActivity.this).create();
@@ -316,34 +316,24 @@ public class MainAnimationActivity extends Activity
 		{
 			public void onClick(View v) 
 			{
-				/*ShakeData opinion = new ShakeData();
-				opinion.setOpinion(resultContent);
-				opinion.save(new SaveListener<String>() 
-				{
-					public void done(String objectId, BmobException e) 
-					{
-						
-					}
-				});*/
-				
-				//����appע�ᵽ΢��
+				//将该app注册到微信
 				api.registerApp(ConstantsUtil.APP_ID);
-				//��ʼ��һ��WXTextObject����
+				//初始化一个WXTextObject对象
 				WXTextObject textObj = new WXTextObject();
 				//textObj.text = content.getText().toString();
 				textObj.text = resultContent;
-				//��WXTextObject�����ʼ��һ��WXMediaMessage����
+				//用WXTextObject对象初始化一个WXMediaMessage对象
 				WXMediaMessage msg = new WXMediaMessage();
 				msg.mediaObject = textObj;
 				msg.description = content.getText().toString();
 				//msg.description = resultContent;
-				//����һ��Req
+				//构造一个Req
 				SendMessageToWX.Req req = new SendMessageToWX.Req();
-				//transaction�ֶ�����Ψһ��ʶһ������
+				//transaction字段用于唯一标识一个请求
 				req.transaction = String.valueOf(System.currentTimeMillis());
 				req.message = msg;
 				req.scene = SendMessageToWX.Req.WXSceneSession;
-				//����api�ӿڷ�����ݵ�΢��
+				//调用api接口发送数据到微信
 				api.sendReq(req);
 				alertDialog.cancel();
 			}
@@ -359,7 +349,7 @@ public class MainAnimationActivity extends Activity
 
 	}
 	
-	//�������Ի���
+	//意见反馈
 	private void FeedbackDialog()
 	{
 		alertDialog = new AlertDialog.Builder(MainAnimationActivity.this).create();
@@ -377,7 +367,7 @@ public class MainAnimationActivity extends Activity
 			{
 				if(TextUtils.isEmpty(content.getText().toString()))
 				{
-					ToastUtil.toastCenter(MainAnimationActivity.this, "����д�������ύ");
+					ToastUtil.toastCenter(MainAnimationActivity.this, "意见不能为空");
 				}
 				else
 				{
@@ -389,18 +379,16 @@ public class MainAnimationActivity extends Activity
 						{
 							if(e == null)
 							{
-								ToastUtil.toastCenter(MainAnimationActivity.this, "�ύ�ɹ�");
+								ToastUtil.toastCenter(MainAnimationActivity.this, "意见提交成功");
 								alertDialog.cancel();
 							}
 							else
 							{
-								ToastUtil.toastCenter(MainAnimationActivity.this, "�ύʧ�ܣ����Ժ�����");
+								ToastUtil.toastCenter(MainAnimationActivity.this, "意见提交失败");
 							}
 						}
 					});
 				}
-				
-				//System.out.println(content.getText().toString());
 			}
 		});
 		cancel.setOnClickListener(new OnClickListener() 

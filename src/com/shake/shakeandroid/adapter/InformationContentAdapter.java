@@ -23,7 +23,7 @@ public class InformationContentAdapter extends BaseAdapter
 	private List<Punishment> infoList;
 	private Punishment punishmentValues;
 	@SuppressLint("UseSparseArrays")
-	private  static HashMap<Integer, Punishment> trueMap = new HashMap<Integer, Punishment>();//ÀûÓÃHashMap´æ·Å±»Ñ¡ÖÐµÄ¶ÔÏó
+	private  static HashMap<Integer, Punishment> trueMap = new HashMap<Integer, Punishment>();//ï¿½ï¿½ï¿½ï¿½HashMapï¿½ï¿½Å±ï¿½Ñ¡ï¿½ÐµÄ¶ï¿½ï¿½ï¿½
 	public InformationContentAdapter(Context context, List<Punishment> datas)
 	{
 		this.context = context;
@@ -71,7 +71,7 @@ public class InformationContentAdapter extends BaseAdapter
 					punishmentValues.setIsSelect(true);
 					trueMap.put(index, punishmentValues);
 				}
-				System.out.println("µÚ"+ index +"ÏîµÄÖµÎª" + punishmentValues.getIsSelect());
+				System.out.println("ç¬¬"+ index +"é¡¹çš„å€¼ä¸º" + punishmentValues.getIsSelect());
 			}
 		});
 		

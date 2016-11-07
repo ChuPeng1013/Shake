@@ -27,7 +27,7 @@ public class ShakeAndroidDB
 		}
 		return shakeAndroidDB;
 	}
-	//½«PunishmentÊµÀı´æ´¢µ½Êı¾İ¿â
+	//å°†Punishmentå®ä¾‹å­˜å‚¨åˆ°æ•°æ®åº“
 	public void savePunishment(Punishment punishment)
 	{
 		if(punishment != null)
@@ -37,7 +37,7 @@ public class ShakeAndroidDB
 			db.insert("Punishment", null, values);
 		}
 	}
-	//´ÓÊı¾İ¿â¶ÁÈ¡µ½ÊµÀıÖĞ
+	//ä»æ•°æ®åº“è¯»å–åˆ°å®ä¾‹ä¸­
 	public List<Punishment> loadPunishment()
 	{
 		List<Punishment> list = new ArrayList<Punishment>();
@@ -55,7 +55,7 @@ public class ShakeAndroidDB
 		return list;
 	}
 	
-	//¸øÊı¾İ¿âÖĞÌí¼ÓÒ»ÌõÊı¾İ
+	//ç»™æ•°æ®åº“ä¸­æ·»åŠ ä¸€æ¡æ•°æ®
 	public boolean addData(String content)
 	{
 		//SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -65,7 +65,7 @@ public class ShakeAndroidDB
 		values.clear();
 		return true;
 	}
-	//¸øÊı¾İ¿âÉ¾³ıÒ»ÌõÊı¾İ
+	//ç»™æ•°æ®åº“åˆ é™¤ä¸€æ¡æ•°æ®
 	public boolean removeData(String content)
 	{
 		db.delete("Punishment", "punishment_content = ?", new String[]{content});

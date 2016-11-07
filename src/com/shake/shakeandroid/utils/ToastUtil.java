@@ -23,11 +23,11 @@ public class ToastUtil
 			return;
 		}
 		Toast t = Toast.makeText(context, text, Toast.LENGTH_SHORT);
-		// 获取layoutInflater对象
+		// 鑾峰彇layoutInflater瀵硅薄
 		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		// 由layout文件创建一个view 对象
+		// 鐢眑ayout鏂囦欢鍒涘缓涓�涓獀iew 瀵硅薄
 		View layout = inflater.inflate(R.layout.toast, null);
-		// 实例化Imageview和textview对象
+		// 瀹炰緥鍖朓mageview鍜宼extview瀵硅薄
 		TextView textView = (TextView) layout.findViewById(R.id.message);
 		textView.setText(text);
 		t.setView(layout);
