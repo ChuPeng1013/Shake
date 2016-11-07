@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<contents>
+    <content>
+	<id>1</id>
+	<item>在公司的微信群里发一个50元红包</item>
+    </content>
+    <content>
+	<id>2</id>
+	<item>在公司的钉钉群里发一个50元红包</item>
+    </content>
+    <content>
+	<id>3</id>
+	<item>给大家买水果</item>
+    </content>
+    <content>
+	<id>4</id>
+	<item>给大家买饮料</item>
+    </content>
+    <content>
+	<id>5</id>
+	<item>做俯卧撑30个，中断1次追加5个</item>
+    </content>
+    <content>
+	<id>6</id>
+	<item>打扫卫生1周</item>
+    </content>
+    <content>
+	<id>7</id>
+	<item>走楼梯上17层</item>
+    </content>
+</contents>
