@@ -198,7 +198,7 @@ public class MainAnimationActivity extends Activity
 			
 			public void onDismiss(PopupMenu menu) 
 			{
-				//ToastUtil.toastCenter(MainAnimationActivity.this, "�ر�PopupMenu");
+				
 			}
 		});
 	    
@@ -287,7 +287,7 @@ public class MainAnimationActivity extends Activity
 				}
 				else
 				{
-					ToastUtil.toastCenter(MainAnimationActivity.this, "��������");
+					ToastUtil.toastCenter(MainAnimationActivity.this, "数据库无信息");
 				}
 			}
 		}

@@ -187,7 +187,7 @@ public class MainActivity extends Activity
 				{
 					int index=(int)(Math.random()*list.size());
 					resultContent = list.get(index).getContent();
-					//��100ms
+					//震动100ms
 					VibratorUtil.Vibrate(MainActivity.this, 1000);
 					dialog("点击确定发送到微信查看结果");
 				}

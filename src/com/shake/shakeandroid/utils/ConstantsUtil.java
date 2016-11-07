@@ -4,7 +4,7 @@ package com.shake.shakeandroid.utils;
 /**
  * 一些常量
  * 
- * @author cp
+ * @author ChuPeng
  *
  */
 public class ConstantsUtil 

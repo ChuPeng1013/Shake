@@ -50,7 +50,7 @@ public class InformationActivity extends Activity
 		}
 		else
 		{
-			ToastUtil.toastCenter(InformationActivity.this, "�����");
+			ToastUtil.toastCenter(InformationActivity.this, "数据库为空");
 		}
 		add.setOnClickListener(new OnClickListener() 
 		{
