@@ -23,7 +23,7 @@ public class ShakeAndroidOpenHelper extends SQLiteOpenHelper
 		
 	}
 	
-	//内容表建表语句
+	//鏁版嵁搴撴柊寤轰竴涓〃
 	public static final String CREATE_CONTENT = "create table Punishment ("
 											  + "id integer primary key autoincrement, "
 											  + "punishment_content text)";

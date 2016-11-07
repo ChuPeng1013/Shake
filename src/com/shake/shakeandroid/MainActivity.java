@@ -69,13 +69,13 @@ public class MainActivity extends Activity
 				{
 					int index=(int)(Math.random()*datas.size());
 					resultContent = datas.get(index).getPunishmentContent();
-					//Õğ¶¯100ms
+					//éœ‡åŠ¨100ms
 					VibratorUtil.Vibrate(MainActivity.this, 1000);
-					dialog("µã»÷È·¶¨·¢ËÍµ½Î¢ĞÅ²é¿´½á¹û");
+					dialog("ç‚¹å‡»ç¡®å®šå‘é€åˆ°å¾®ä¿¡æŸ¥çœ‹ç»“æœ");
 				}
 				else
 				{
-					ToastUtil.toastCenter(MainActivity.this, "ÇëÌí¼ÓÊı¾İ");
+					ToastUtil.toastCenter(MainActivity.this, "è¯·æ·»åŠ æ•°æ®");
 				}
 			}
 		});*/
@@ -90,13 +90,13 @@ public class MainActivity extends Activity
 				{
 					int index=(int)(Math.random()*list.size());
 					resultContent = list.get(index).getContent();
-					//Õğ¶¯100ms
+					//éœ‡åŠ¨100ms
 					VibratorUtil.Vibrate(MainActivity.this, 1000);
-					dialog("µã»÷È·¶¨·¢ËÍµ½Î¢ĞÅ²é¿´½á¹û");
+					dialog("ç‚¹å‡»ç¡®å®šå‘é€åˆ°å¾®ä¿¡æŸ¥çœ‹ç»“æœ");
 				}
 				else
 				{
-					ToastUtil.toastCenter(MainActivity.this, "ÇëÌí¼ÓÊı¾İ");
+					ToastUtil.toastCenter(MainActivity.this, "è¯·æ·»åŠ æ•°æ®");
 				}
 			}
 		});*/
@@ -115,7 +115,7 @@ public class MainActivity extends Activity
 				}
 				else
 				{
-					ToastUtil.toastCenter(MainActivity.this, "ÇëÌí¼ÓXMLÎÄ¼ş");
+					ToastUtil.toastCenter(MainActivity.this, "è¯·æ·»åŠ XMLæ–‡ä»¶");
 				}
 			}
 		});
@@ -153,13 +153,13 @@ public class MainActivity extends Activity
 				{
 					int index=(int)(Math.random()*datas.size());
 					resultContent = datas.get(index).getPunishmentContent();
-					//Õğ¶¯100ms
+					//éœ‡åŠ¨100ms
 					VibratorUtil.Vibrate(MainActivity.this, 1000);
-					dialog("µã»÷È·¶¨·¢ËÍµ½Î¢ĞÅ²é¿´½á¹û");
+					dialog("ç‚¹å‡»ç¡®å®šå‘é€åˆ°å¾®ä¿¡æŸ¥çœ‹ç»“æœ");
 				}
 				else
 				{
-					ToastUtil.toastCenter(MainActivity.this, "ÇëÌí¼ÓÊı¾İ");
+					ToastUtil.toastCenter(MainActivity.this, "è¯·æ·»åŠ æ•°æ®");
 				}
 			}
 		}
@@ -187,13 +187,13 @@ public class MainActivity extends Activity
 				{
 					int index=(int)(Math.random()*list.size());
 					resultContent = list.get(index).getContent();
-					//Õğ¶¯100ms
+					//ï¿½ï¿½100ms
 					VibratorUtil.Vibrate(MainActivity.this, 1000);
-					dialog("µã»÷È·¶¨·¢ËÍµ½Î¢ĞÅ²é¿´½á¹û");
+					dialog("ç‚¹å‡»ç¡®å®šå‘é€åˆ°å¾®ä¿¡æŸ¥çœ‹ç»“æœ");
 				}
 				else
 				{
-					ToastUtil.toastCenter(MainActivity.this, "ÇëÌí¼ÓÊı¾İ");
+					ToastUtil.toastCenter(MainActivity.this, "è¯·æ·»åŠ æ•°æ®");
 				}
 			}
 		}
@@ -221,7 +221,7 @@ public class MainActivity extends Activity
 		}
 		return true;
 	}*/
-	private void dialog(String result)//¸ù¾İÌáÊ¾ĞÅÏ¢µ¯³ö¶Ô»°¿òµ¯³ö¶Ô»°¿ò
+	private void dialog(String result)//æ ¹æ®æç¤ºä¿¡æ¯å¼¹å‡ºå¯¹è¯æ¡†å¼¹å‡ºå¯¹è¯æ¡†
 	{
 		alertDialog = new AlertDialog.Builder(MainActivity.this).create();
 		alertDialog.setView(new EditText(MainActivity.this));
@@ -238,24 +238,24 @@ public class MainActivity extends Activity
 		{
 			public void onClick(View v) 
 			{
-				//½«¸Ãapp×¢²áµ½Î¢ĞÅ
+				//å°†è¯¥appæ³¨å†Œåˆ°å¾®ä¿¡
 				api.registerApp(APP_ID);
-				//³õÊ¼»¯Ò»¸öWXTextObject¶ÔÏó
+				//åˆå§‹åŒ–ä¸€ä¸ªWXTextObjectå¯¹è±¡
 				WXTextObject textObj = new WXTextObject();
 				//textObj.text = content.getText().toString();
 				textObj.text = resultContent;
-				//ÓÃWXTextObject¶ÔÏó³õÊ¼»¯Ò»¸öWXMediaMessage¶ÔÏó
+				//ç”¨WXTextObjectå¯¹è±¡åˆå§‹åŒ–ä¸€ä¸ªWXMediaMessageå¯¹è±¡
 				WXMediaMessage msg = new WXMediaMessage();
 				msg.mediaObject = textObj;
 				msg.description = content.getText().toString();
 				//msg.description = resultContent;
-				//¹¹ÔìÒ»¸öReq
+				//æ„é€ ä¸€ä¸ªReq
 				SendMessageToWX.Req req = new SendMessageToWX.Req();
-				//transaction×Ö¶ÎÓÃÓÚÎ¨Ò»±êÊ¶Ò»¸öÇëÇó
+				//transactionå­—æ®µç”¨äºå”¯ä¸€æ ‡è¯†ä¸€ä¸ªè¯·æ±‚
 				req.transaction = String.valueOf(System.currentTimeMillis());
 				req.message = msg;
 				req.scene = SendMessageToWX.Req.WXSceneSession;
-				//µ÷ÓÃapi½Ó¿Ú·¢ËÍÊı¾İµ½Î¢ĞÅ
+				//è°ƒç”¨apiæ¥å£å‘é€æ•°æ®åˆ°å¾®ä¿¡
 				api.sendReq(req);
 				alertDialog.cancel();
 			}
